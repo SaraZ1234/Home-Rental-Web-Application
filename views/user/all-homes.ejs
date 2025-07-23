@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>All Guest Homes</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Helvetica Neue", sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar-airbnb {
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 20px;
+      }
+
+      .navbar-brand {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #ff385c;
+      }
+
+      .nav-link {
+        color: #222 !important;
+        font-weight: 500;
+        margin-right: 1rem;
+      }
+
+      .nav-link:hover {
+        color: #ff385c !important;
+      }
+
+      .navbar-toggler {
+        border: none;
+      }
+
+      @media (max-width: 768px) {
+        .navbar-airbnb {
+          padding: 8px 16px;
+        }
+      }
+
+      h1 {
+        text-align: center;
+        color: #222;
+        font-size: 32px;
+        margin: 30px 0;
+      }
+
+      .home-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+        width: 100%;
+        max-width: 1200px; /* Fits 3 cards nicely on desktop */
+        margin: 0 auto;
+        padding: 20px;
+        justify-content: center;
+      }
+
+      /* If only 1 card */
+      .home-list:has(.home-card:only-child) {
+        max-width: 300px;
+      }
+
+      /* If exactly 2 cards */
+      .home-list:has(.home-card:first-child:nth-last-child(2)) {
+        max-width: 640px;
+      }
+
+      .home-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        justify-content: center;
+      }
+
+      /* Home card styling */
+      .home-card {
+        background-color: #fff;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        display: flex;
+        flex-direction: column;
+        width: 340px; /* consistent fixed width */
+        height: 100%;
+        margin: 0 auto; /* center individual cards if fewer than 3 */
+      }
+
+      /* Hover effect */
+      .home-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+      }
+      .home-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .home-card:hover .home-image {
+        transform: scale(1.03);
+      }
+
+      .home-info {
+        padding: 18px 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .home-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 6px;
+        line-height: 1.3;
+      }
+
+      .home-location {
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 10px;
+      }
+
+      .home-details {
+        font-size: 13px;
+        color: #666;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+
+      .home-price {
+        font-size: 15px;
+        font-weight: 700;
+        color: #ff385c;
+        margin-bottom: 8px;
+      }
+
+      .home-description {
+        font-size: 13px;
+        color: #555;
+        line-height: 1.4;
+        max-height: 50px;
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+
+      .home-rating {
+        font-size: 13px;
+        color: #333;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .home-rating i {
+        color: #fbbf24;
+        margin-left: 5px;
+      }
+
+      .details-button {
+        display: inline-block;
+        background-color: #ff385c;
+        color: white;
+        padding: 10px 15px;
+        margin: 5px 20px 20px;
+        border: none;
+        width: 120px;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 10px rgba(255, 56, 92, 0.2);
+        cursor: pointer;
+      }
+
+      .details-button:hover {
+        background-color: #e03150;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(255, 56, 92, 0.3);
+      }
+
+      .favourite-btn {
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: #fbbf24;
+        cursor: pointer;
+        transition: transform 0.2s ease, color 0.2s ease;
+      }
+
+      .favourite-btn:hover {
+        color: #e0a800;
+        transform: scale(1.2);
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 26px;
+          margin: 20px;
+        }
+
+        .home-title {
+          font-size: 16px;
+        }
+
+        .home-rating,
+        .home-price,
+        .home-location {
+          font-size: 12.5px;
+        }
+
+        .details-button {
+          font-size: 12px;
+          width: 100px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-airbnb sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="/host/home">MyBnB</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarContent"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/host/all-homes">Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/host/home/remove-reservation"
+                >Reservations</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/host/favorites">Favourites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/host">Add Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <h1>Explore Guest Homes</h1>
+
+    <div class="home-list">
+      <% homes.forEach(home => { %>
+      <div class="home-card">
+        <img class="home-image" src="<%= home.imageUrl %>" alt="Home Image" />
+
+        <div class="home-info">
+          <div class="home-title"><%= home.title %></div>
+          <div class="home-location"><%= home.location %></div>
+
+          <div class="home-details">
+            <span><%= home.type %></span>
+            <span><%= home.rooms %> Rooms</span>
+          </div>
+
+          <div class="home-price">Rs. <%= home.price %> / night</div>
+          <div class="home-description"><%= home.description %></div>
+
+          <% if (home.isFavourite) { %>
+          <form
+            action="/host/home/unfavourite/<%= home.id %>"
+            method="POST"
+            style="display: inline"
+          >
+            <button
+              type="submit"
+              class="favourite-btn"
+              title="Remove from Favorites"
+            >
+              <i class="fas fa-star"></i>
+            </button>
+          </form>
+          <% } else { %>
+          <form
+            action="/host/home/favourite/<%= home.id %>"
+            method="POST"
+            style="display: inline"
+          >
+            <button
+              type="submit"
+              class="favourite-btn"
+              title="Add to Favorites"
+            >
+              <i class="far fa-star"></i>
+            </button>
+          </form>
+          <% } %>
+        </div>
+
+        <a href="/host/home/<%= home.id %>" class="details-button"
+          >View Details</a
+        >
+      </div>
+      <% }); %>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

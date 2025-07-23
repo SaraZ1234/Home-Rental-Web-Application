@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f1f5f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      text-align: center;
+      color: #1f2937;
+      margin-bottom: 24px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      color: #374151;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      background-color: #f9fafb;
+      font-size: 14px;
+      transition: border-color 0.2s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #2563eb;
+      background-color: #fff;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background-color: #2563eb;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #1e40af;
+    }
+
+    #previewImage {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      display: none;
+      border: 1px solid #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2><%= editing ? 'Update Listing' : 'Add New Listing' %></h2>
+
+    <form action="/host/home/edit-home" method="POST">
+      <input type="hidden" name="homeId" value="<%= home.id %>">
+
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" value="<%= home.title %>" required>
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" value="<%= home.location %>" required>
+
+      <label for="type">Type</label>
+      <select id="type" name="type" required>
+        <option value="apartment" <%= home.type === 'apartment' ? 'selected' : '' %>>Apartment</option>
+        <option value="house" <%= home.type === 'house' ? 'selected' : '' %>>House</option>
+        <option value="studio" <%= home.type === 'studio' ? 'selected' : '' %>>Studio</option>
+      </select>
+
+      <label for="rooms">Rooms</label>
+      <input type="number" id="rooms" name="rooms" value="<%= home.rooms %>" required>
+
+<label for="price">Price (Rs.)</label>
+<input type="number" id="price" name="price" value="<%= home.price %>" required>
+
+<label for="clean_fees">Cleaning fees per day (PKR)</label>
+<input type="number" id="clean_fees" name="clean_fees" value="<%= home.clean_fees %>" min="500" step="100" required />
+
+<label for="service_fees">Service fees per day (PKR)</label>
+<input type="number" id="service_fees" name="service_fees" value="<%= home.service_fees %>" min="500" step="100" required />
+
+
+      <label for="imageUrl">Home Picture URL</label>
+      <input type="text" id="imageUrl" name="imageUrl" value="<%= home.imageUrl %>" placeholder="https://example.com/your-house.jpg" required>
+      <img id="previewImage" src="<%= home.imageUrl %>" alt="Image Preview">
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="4" required><%= home.description %></textarea>
+
+      <input type="submit" value="<%= editing ? 'Update Listing' : 'Submit' %>">
+    </form>
+  </div>
+
+  <script>
+    const imgInput = document.getElementById('imageUrl');
+    const preview = document.getElementById('previewImage');
+
+    function updateImagePreview() {
+      const url = imgInput.value.trim();
+      if (url) {
+        preview.src = url;
+        preview.style.display = 'block';
+      } else {
+        preview.style.display = 'none';
+      }
+    }
+
+    imgInput.addEventListener('input', updateImagePreview);
+    window.addEventListener('load', updateImagePreview);
+  </script>
+</body>
+</html>

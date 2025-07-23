@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>All Guest Homes</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Helvetica Neue", sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 30px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #222;
+        font-size: 32px;
+        margin-bottom: 40px;
+      }
+
+      .home-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .home-card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .home-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+      }
+
+      .home-image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .home-info {
+        padding: 16px 18px;
+        flex-grow: 1;
+      }
+
+      .home-title {
+        font-size: 20px;
+        color: #222;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .home-location {
+        font-size: 14px;
+        color: #717171;
+        margin-bottom: 12px;
+      }
+
+      .home-details {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: #444;
+      }
+
+      .home-price {
+        font-size: 16px;
+        color: #ff5a5f;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .home-description {
+        font-size: 13.5px;
+        color: #555;
+        line-height: 1.5;
+        max-height: 60px;
+        overflow: hidden;
+      }
+
+      .home-rating {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: #333;
+        margin-top: 10px;
+      }
+
+      .home-rating i {
+        color: #fbbf24;
+        margin-left: 5px;
+      }
+
+      .details-button {
+        display: inline-block;
+        background-color: #ff385c;
+        color: white;
+        padding: 10px 15px;
+        margin: 5px 18px 20px;
+        border: none;
+        width: 120px;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 10px rgba(255, 56, 92, 0.2);
+        cursor: pointer;
+      }
+
+      .details-button:hover {
+        background-color: #e03150;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(255, 56, 92, 0.3);
+      }
+      .favourite-btn {
+        background: none;
+        border: none;
+        color: #fbbf24;
+        margin-left: 8px;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        transition: transform 0.2s ease;
+      }
+
+      .favourite-btn:hover {
+        color: #e0a800;
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+
+      @media (max-width: 500px) {
+        .home-title {
+          font-size: 18px;
+        }
+        .home-rating {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Explore Guest Homes</h1>
+
+    <div class="home-list">
+      <% homes.forEach(home => { %>
+      <div class="home-card">
+        <img class="home-image" src="<%= home.imageUrl %>" alt="Home Image" />
+
+        <div class="home-info">
+          <div class="home-title"><%= home.title %></div>
+          <div class="home-location"><%= home.location %></div>
+
+          <div class="home-details">
+            <span><%= home.type %></span>
+            <span><%= home.rooms %> Rooms</span>
+          </div>
+
+          <div class="home-price">Rs. <%= home.price %> / night</div>
+
+          <div class="home-description"><%= home.description %></div>
+
+          <% if (home.isFavourite) { %>
+          <!-- Show remove from favorites button -->
+          <form
+            action="/host/home/unfavourite/<%= home.id %>"
+            method="POST"
+            style="display: inline"
+          >
+            <button
+              type="submit"
+              class="favourite-btn"
+              title="Remove from Favorites"
+            >
+              <i class="fas fa-star"></i>
+              <!-- Filled star -->
+            </button>
+          </form>
+          <% } else { %>
+          <!-- Show add to favorites button -->
+          <form
+            action="/host/home/favourite/<%= home.id %>"
+            method="POST"
+            style="display: inline"
+          >
+            <button
+              type="submit"
+              class="favourite-btn"
+              title="Add to Favorites"
+            >
+              <i class="far fa-star"></i>
+              <!-- Empty star -->
+            </button>
+          </form>
+          <% } %>
+        </div>
+
+        <a href="/host/home/<%= home.id %>" class="details-button"
+          >View Details</a
+        >
+      </div>
+      <% }); %>
+    </div>
+  </body>
+</html>

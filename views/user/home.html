@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyBnB</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        scroll-behavior: smooth;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #fff;
+      }
+
+      .navbar-custom {
+        background-color: white;
+        border-bottom: 1px solid #e0e0e0;
+        padding-top: 17px;
+        padding-bottom: 10px;
+      }
+
+      .navbar-brand {
+        color: #ff385c;
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin-left: 65px;
+      }
+
+      .navbar-nav .nav-link {
+        color: #222;
+        font-weight: 500;
+        margin-right: 20px;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #ff385c;
+      }
+
+      .nav-item {
+        margin-left: 10px;
+      }
+
+      .navbar-nav {
+        margin-right: 30px;
+      }
+
+      .navbar-container {
+        padding: 0 40px;
+      }
+
+      .scrolling-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      .scrolling-wrapper::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      .scrolling-wrapper::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 10px;
+      }
+
+      .listing-card {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 180px;
+        border-radius: 12px;
+        overflow: hidden;
+        scroll-snap-align: start;
+        background-color: #fff;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease;
+      }
+
+      .listing-card:hover {
+        transform: translateY(-3px);
+      }
+
+      .listing-card img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-bottom: 1px solid #eee;
+      }
+
+      .listing-card .p-2 {
+        padding: 0.6rem 0.8rem;
+      }
+
+      .listing-card .badge {
+        font-size: 0.65rem;
+        background-color: #f2f2f2;
+        color: #333;
+        font-weight: 600;
+        padding: 4px 8px;
+      }
+
+      .listing-card h6 {
+        font-size: 0.85rem;
+        margin-top: 0.4rem;
+        font-weight: 600;
+        color: #222;
+      }
+
+      .listing-card small {
+        color: #717171;
+        font-size: 0.75rem;
+      }
+
+      h4 {
+        font-weight: 700;
+        color: #222;
+      }
+      .navbar-custom {
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+
+      .navbar-transparent {
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      id="mainNavbar"
+      class="navbar navbar-expand-lg navbar-custom sticky-top"
+    >
+      <div class="container-fluid navbar-container">
+        <a class="navbar-brand" href="#">MyBnB</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarNav"
+        >
+          <div></div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/host/all-homes">Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/host/home/remove-reservation"
+                >Reservations</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/host/favorites">Favourites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/host">Add Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Content goes here -->
+    <!-- Listings Section: Lahore -->
+    <div class="container my-5">
+      <h4 class="mb-3 fw-bold">Popular homes in Lahore &rsaquo;</h4>
+      <div class="scrolling-wrapper d-flex flex-row overflow-auto">
+        <!-- Card 1 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://media.admiddleeast.com/photos/6849128cd3a407910711c6f0/16%3A10/w_2560%2Cc_limit/DSC06572-HDR.jpg"
+            class="card-img-top"
+            alt="Lahore Apartment"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Guest favorite</span
+            >
+            <h6 class="fw-bold mb-0">Apartment in Lahore</h6>
+            <small>$78 for 2 nights · ★ 5.0</small>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/463490668.jpg?hp=1&k=68307462fc167a2d7a92a7d8b8c50f2613a4a360dc5cdd6808a019230a175396&o="
+            class="card-img-top"
+            alt="Room in Lahore"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Guest favorite</span
+            >
+            <h6 class="fw-bold mb-0">Room in Lahore</h6>
+            <small>$48 for 2 nights · ★ 4.92</small>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/484742749.jpg?hp=1&k=d295b0673c709a6e887f54e1691bff5707820ea3199ad1af4a47db257d79dd4b&o="
+            class="card-img-top"
+            alt="Condo"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Guest favorite</span
+            >
+            <h6 class="fw-bold mb-0">Condo in Lahore</h6>
+            <small>$63 for 2 nights · ★ 4.93</small>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/652226224.jpg?hp=1&k=0ac29b99d7541c4ac295fd6468a72c33bb5c31214d4fe9dd603a8fd08f840e5c&o="
+            class="card-img-top"
+            alt="Loft"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Guest favorite</span
+            >
+            <h6 class="fw-bold mb-0">Loft in Lahore</h6>
+            <small>$88 for 2 nights · ★ 4.91</small>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/562282728.jpg?hp=1&k=cd61be4e950b3f5ae814781fde0ca19d33a32f4901a370cfca60bc6837a19ceb&o="
+            class="card-img-top"
+            alt="Studio"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Superhost</span
+            >
+            <h6 class="fw-bold mb-0">Studio in DHA Lahore</h6>
+            <small>$52 for 2 nights · ★ 4.89</small>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://a0.muscache.com/im/pictures/hosting/Hosting-1164211748758052812/original/58bebf70-e951-4fd6-ba17-9210445499e2.jpeg"
+            class="card-img-top"
+            alt="Luxury Suite"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Luxury pick</span
+            >
+            <h6 class="fw-bold mb-0">Luxury Suite in Lahore</h6>
+            <small>$110 for 2 nights · ★ 4.97</small>
+          </div>
+        </div>
+
+        <!-- Add more cards as needed -->
+      </div>
+    </div>
+
+    <!-- Repeat for Islamabad -->
+    <div class="container my-5">
+      <h4 class="mb-3 fw-bold">Available in Islamabad this weekend &rsaquo;</h4>
+      <div class="scrolling-wrapper d-flex flex-row overflow-auto">
+        <div class="listing-card me-3">
+          <img
+            src="https://lahoresky.com.pk/wp-content/uploads/2024/06/Studio-Apartment-vs-1-Bedroom-Space-and-Layout-1024x536.webp"
+            class="card-img-top"
+            alt="Islamabad"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Guest favorite</span
+            >
+            <h6 class="fw-bold mb-0">House in Islamabad</h6>
+            <small>$67 for 2 nights · ★ 4.95</small>
+          </div>
+        </div>
+
+        <div class="listing-card me-3">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/681681889.jpg?hp=1&k=3188279706c6888f1b0dcb8477ae81f7d2883b4efdda15c89128fe4340ccbcad&o="
+            class="card-img-top"
+            alt="City Apartment"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Guest favorite</span
+            >
+            <h6 class="fw-bold mb-0">Apartment in Islamabad</h6>
+            <small>$59 for 2 nights · ★ 4.87</small>
+          </div>
+        </div>
+
+        <!-- Card 1 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/489367683.jpg?hp=1&k=fab8f23b49e13b456db3c902f3284d5dc894bd25169a9720eb8747e9bca1c0c6&o="
+            class="card-img-top"
+            alt="Room in Lahore"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Guest favorite</span
+            >
+            <h6 class="fw-bold mb-0">Room in Lahore</h6>
+            <small>$48 for 2 nights · ★ 4.92</small>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/669750873.jpg?hp=1&k=14dfa084541f935dbb07eb44265197a031921e39339aa912db6cf6c772496dec&o="
+            class="card-img-top"
+            alt="Private room"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Superhost</span
+            >
+            <h6 class="fw-bold mb-0">Private Room in Gulberg</h6>
+            <small>$39 for 2 nights · ★ 4.85</small>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/293572120.jpg?hp=1&k=1b4a631aa65ef3275abfc2024b389212f02bf78710c041f9ac0903c594083bcb&o="
+            class="card-img-top"
+            alt="Apartment in Lahore"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Top rated</span
+            >
+            <h6 class="fw-bold mb-0">Apartment in DHA Phase 6</h6>
+            <small>$57 for 2 nights · ★ 4.90</small>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/646519843.jpg?hp=1&k=5cdd97bb9c2328d9922e484bcef76498c1116c6eaa3b4fa29c5c4397728748db&o="
+            class="card-img-top"
+            alt="Modern Room"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Highly rated</span
+            >
+            <h6 class="fw-bold mb-0">Modern Room near Airport</h6>
+            <small>$45 for 2 nights · ★ 4.88</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <h4 class="mb-3 fw-bold">Available in Dubai &rsaquo;</h4>
+      <div class="scrolling-wrapper d-flex flex-row overflow-auto">
+        <div class="listing-card me-3">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/403565186.jpg?hp=1&k=8b19badb46da63c4b4eee0991c5c5f433a092650f21a7a1335f6fdcbb701c459&o="
+            class="card-img-top"
+            alt="Islamabad"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Guest favorite</span
+            >
+            <h6 class="fw-bold mb-0">Luxury Modern Studio in JLT</h6>
+            <small>$67 for 2 nights · ★ 4.95</small>
+          </div>
+        </div>
+
+        <div class="listing-card me-3">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/592260123.jpg?hp=1&k=46976d0a8547f3b2eac172feb36c0d7dee8c376e0e2617ec274c248e5852c6e0&o="
+            class="card-img-top"
+            alt="City Apartment"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Guest favorite</span
+            >
+            <h6 class="fw-bold mb-0">Luxury Apartment in Dubai</h6>
+            <small>$59 for 2 nights · ★ 4.87</small>
+          </div>
+        </div>
+
+        <!-- Card 1 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/519827279.jpg?hp=1&k=3c38e45ad2e3664d002b464858214b5f0e53bca3f372a03a1b25c09f1d713b14&o="
+            class="card-img-top"
+            alt="Room in Lahore"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Guest favorite</span
+            >
+            <h6 class="fw-bold mb-0">Private Room in Dubai</h6>
+            <small>$48 for 2 nights · ★ 4.92</small>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://www.idesignuae.com/wp-content/uploads/2021/07/pexels-houzlook-com-3797991-1024x768.jpg"
+            class="card-img-top"
+            alt="Private room"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Superhost</span
+            >
+            <h6 class="fw-bold mb-0">Private Room in Dubai</h6>
+            <small>$39 for 2 nights · ★ 4.85</small>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://riverislandinterior.ae/wp-content/uploads/elementor/thumbs/living-room--qgb1ydoy80y0zqn668wvxshil1htgo83i9q5nce4i8.jpg"
+            class="card-img-top"
+            alt="Apartment in Lahore"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Top rated</span
+            >
+            <h6 class="fw-bold mb-0">Fancy Studio at Marasi</h6>
+            <small>$57 for 2 nights · ★ 4.90</small>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="listing-card me-3">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max300/519827338.jpg?k=7b6147d3ab9582a6c6e792cc0341427a3496e3ea58825b784e6631179dd40bdf&o="
+            class="card-img-top"
+            alt="Modern Room"
+          />
+          <div class="p-2">
+            <span class="badge bg-light text-dark rounded-pill mb-1"
+              >Highly rated</span
+            >
+            <h6 class="fw-bold mb-0">Square Tower Studio in Dubai</h6>
+            <small>$45 for 2 nights · ★ 4.88</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-light text-dark pt-4 border-top">
+      <div class="container">
+        <div class="row text-start">
+          <div class="col-6 col-md-3 mb-3">
+            <h6 class="fw-bold">Support</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted">AirCover</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >Safety information</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >Cancellation options</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 mb-3">
+            <h6 class="fw-bold">Community</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >Airbnb.org</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted">Refugees</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >Disaster response</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 mb-3">
+            <h6 class="fw-bold">Hosting</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >Try hosting</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >AirCover for Hosts</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >Explore hosting</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 mb-3">
+            <h6 class="fw-bold">About</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-decoration-none text-muted">Newsroom</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted">Careers</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >Investors</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="d-flex justify-content-between align-items-center pt-3 border-top"
+        >
+          <p class="mb-0 small text-muted">
+            &copy; 2025 MyBnB. All rights reserved.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-muted"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-muted"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-muted"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

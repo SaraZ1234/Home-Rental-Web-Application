@@ -1,0 +1,22 @@
+[
+  {
+    "homeId": "0.8183612252199207",
+    "name": "Hira Shahzad",
+    "contact": "03457640184",
+    "checkin": "2025-12-03",
+    "checkout": "2025-07-07",
+    "nights": 149,
+    "totalStayPrice": 1192000,
+    "totalAmount": 1193200
+  },
+  {
+    "homeId": "0.09684774337142021",
+    "name": "Danyal",
+    "contact": "0301-1234567",
+    "checkin": "2025-12-11",
+    "checkout": "2025-12-13",
+    "nights": 2,
+    "totalStayPrice": 30000,
+    "totalAmount": 32100
+  }
+]

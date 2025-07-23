@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My listings</title>
+</head>
+<body>
+  <h1>My Listings</h1>
+
+<% if (homes.length === 0) { %>
+  <p>You have not listed any homes yet.</p>
+<% } else { %>
+  <ul>
+    <% homes.forEach(home => { %>
+      <li>
+        <h2><%= home.title %></h2>
+        <p><%= home.location %></p>
+        <p>PKR <%= home.price %></p>
+        <img src="<%= home.imageUrl %>" alt="<%= home.title %>" style="width: 300px;" />
+        <p><%= home.description %></p>
+
+        <!-- Optional: Add edit/delete buttons -->
+        <a href="/edit-home/<%= home.id %>">Edit</a> |
+        <a href="/delete-home/<%= home.id %>">Delete</a>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>
+
+</body>
+</html>

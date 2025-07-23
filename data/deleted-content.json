@@ -1,0 +1,178 @@
+[
+  [
+    {
+      "title": "Spacious Family Villa in Islamabad with Garden & Wi-Fi",
+      "location": "Islamabad",
+      "type": "villa",
+      "rooms": "5",
+      "price": "6000",
+      "imageUrl": "https://dynamic-media.tacdn.com/media/vr-ha-splice-j/10/21/dd/20.jpg?w=800&h=-1",
+      "description": "Fully furnished 10-room villa in Islamabad (G-11) with Wi-Fi, AC, kitchen, and 24/7 security.\r\nNearby malls, parks, and restaurants just minutes away.\r\nPrivate garden, free parking, and peaceful surroundings.\r\nNo smoking indoors — perfect for families or groups.\r\n\r\n",
+      "id": "0.22199912130908228"
+    }
+  ],
+  {
+    "title": "Hillside Stone Cottage with Mountain View",
+    "location": "Kaghan, Shogran Road",
+    "type": "other",
+    "rooms": "2",
+    "price": "6000",
+    "imageUrl": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=60",
+    "description": "Charming stone cottage overlooking the lush green hills of Shogran. Private garden, wood interior, and easy access to Siri Paye meadows. Great for small families and nature lovers. No loud music after 10 PM.\r\n\r\n",
+    "id": "0.9569795874029564"
+  },
+  {
+    "title": "Luxury Family Chalet Near River in Kaghan",
+    "location": "Kaghan, near Battakundi",
+    "type": "other",
+    "rooms": "4",
+    "price": "12000",
+    "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=60",
+    "description": "Spacious chalet perfect for large families or groups, located minutes from Battakundi waterfalls. Features a balcony with river views, BBQ area, indoor fireplace, and 24/7 security. Pets not allowed. Check-out by 11 AM.\r\n\r\n",
+    "id": "0.4959712775903138"
+  },
+  {
+    "id": "0.8501337185264309",
+    "title": "Riverside Cottage with Mountain Views in London",
+    "location": "London",
+    "type": "apartment",
+    "rooms": "3",
+    "price": "9800",
+    "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/3b/79/71/getlstd-property-photo.jpg?w=500&h=-1&s=1",
+    "description": "This riverside cottage is tucked away in the lush greenery of Fizagat, with breathtaking views of the Swat River and surrounding mountains. Built in a rustic style with local stone and wood, the home offers peace, comfort, and proximity to Mingora’s attractions. Guests can relax on the outdoor patio, enjoy local trout dishes, or take a short drive to Malam Jabba or Bahrain. Free Wi-Fi and 24/7 security provided.\r\n\r\n"
+  },
+  {
+    "id": "0.015213152785647832",
+    "title": "Traditional Stone House with Mountain Views in Hunza",
+    "location": "Hunza, Altit Village",
+    "type": "apartment",
+    "rooms": "3",
+    "price": "9000",
+    "imageUrl": "https://www.wildernesstravel.com/wp-content/uploads/2023/11/10-serena-khaplu-palace-exterior-landscape.jpg",
+    "description": "This beautifully restored stone house in Altit Village offers breathtaking views of the Hunza Valley and snow-capped Rakaposhi. Decorated with local wooden carvings and handmade rugs, it’s a perfect stay for cultural enthusiasts and trekkers. Includes terrace seating, local breakfast, and guide access. No smoking indoors.\r\n\r\n"
+  },
+  {
+    "title": "Lakefront Stone Cottage near Shangrila, Skardu",
+    "location": "Skardu, Lower Kachura Lake (Shangrila)",
+    "type": "other",
+    "rooms": "2",
+    "price": "12000",
+    "imageUrl": "https://shangrilaresorts.com.pk/wp-content/uploads/2018/06/0J3A8346ccccc-1000x667-1.jpg",
+    "description": "Nestled right on the shore of Lower Kachura Lake, this charming stone cottage is ideal for a romantic retreat or peaceful family stay. Surrounded by cherry trees and with direct lake access, guests enjoy serene mornings, boat rides, and awe-inspiring views of Skardu's rugged peaks. It features traditional wooden interiors, large windows, and a private deck. Includes breakfast, parking, and bonfire service on request.\r\n\r\n",
+    "id": "0.5730388663111888"
+  },
+  {
+    "title": "Cozy Wooden Hut Surrounded by Forests",
+    "location": "Kaghan, Mahandri Area",
+    "type": "other",
+    "rooms": "1",
+    "price": "4200",
+    "imageUrl": "https://live.staticflickr.com/4726/27504275549_bf4159c372_b.jpg",
+    "description": "\"Rustic wooden hut tucked into Kaghan’s pine forest—evokes the charm of Sharan forestry cabins. Ideal for those seeking peace and immersion in nature.\"\r\n\r\n",
+    "id": "0.7457802237200325"
+  },
+  {
+    "title": "Modern Hillview Apartment in Islamabad",
+    "location": "Islamabad, E-11",
+    "type": "apartment",
+    "rooms": "3",
+    "price": "3500",
+    "imageUrl": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D",
+    "description": "A stylish 3-room apartment in E-11 with balcony views of the Margalla Hills.\r\nFeatures Wi-Fi, smart TV, kitchen, lift access & 24/7 security.\r\nClose to cafes, grocery stores, and hiking trails.\r\nIdeal for couples or small families—no pets allowed.\r\n\r\n",
+    "id": "0.28402952964424066"
+  },
+  {
+    "title": "Chic City-View Apartment in Central Istanbul",
+    "location": "Istanbul, Beyoğlu",
+    "type": "apartment",
+    "rooms": "2",
+    "price": "8900",
+    "imageUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-1415968625592175679/original/928378ff-fc86-4186-8b64-5c23e5559828.jpeg?im_w=1200",
+    "description": "Modern 2-room apartment in Beyoğlu with stunning city views and balcony.\r\nIncludes Wi-Fi, AC, elevator, equipped kitchen, and 24/7 building security.\r\nWalking distance to Istiklal Street, cafes, metro & Galata Tower.\r\nQuiet, safe, and ideal for couples or solo travelers. No smoking indoors.\r\n\r\n",
+    "id": "0.7327991770282694"
+  },
+  {
+    "title": "Luxury Family Chalet Near River in Kaghan",
+    "location": "Kaghan, near Battakundi",
+    "type": "other",
+    "rooms": "4",
+    "price": "12000",
+    "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=60",
+    "description": "Spacious chalet perfect for large families or groups, located minutes from Battakundi waterfalls. Features a balcony with river views, BBQ area, indoor fireplace, and 24/7 security. Pets not allowed. Check-out by 11 AM.\r\n\r\n",
+    "id": "0.17524450683883075"
+  },
+  {
+    "title": "Eco‑Friendly Bamboo Cabin by Kunhar River",
+    "location": "Kaghan, near Kunhar Riverside",
+    "type": "other",
+    "rooms": "2",
+    "price": "7500",
+    "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/32/9e/cd/caption.jpg?h=400&s=1&w=800",
+    "description": "Built from sustainable bamboo and local stone, this eco-cabin sits right beside the Kunhar River. Each room overlooks the flowing water and forested hills. Solar lighting, compost toilets, and an open-air deck with seating for river gazing. Great for eco-conscious travelers—no Wi‑Fi to keep you unplugged.\r\n\r\n",
+    "id": "0.851671219480628"
+  },
+  {
+    "id": "0.3682619559266481",
+    "title": "Modern Glass-Front Chalet Overlooking Hunza Valley",
+    "location": "Hunza, Duikar (Eagle’s Nest Area)",
+    "type": "apartment",
+    "rooms": "2",
+    "price": "14500",
+    "imageUrl": "https://t4.ftcdn.net/jpg/11/76/79/19/240_F_1176791909_xEqxYONfI1YHV2okI1jbGoVuJyuFBmYH.jpg",
+    "description": "Perched above the clouds in Duikar, this glass-front chalet offers panoramic views of Rakaposhi, Ultar Sar, and Ladyfinger Peak. Modern interiors with wood accents, private balcony, and sunrise views that are second to none. Perfect for honeymooners or anyone seeking quiet luxury. Complimentary breakfast and guided jeep tours available.\r\n\r\n"
+  },
+  {
+    "title": "Lakefront Stone Cottage near Shangrila, Skardu",
+    "location": "Skardu, Lower Kachura Lake (Shangrila)",
+    "type": "other",
+    "rooms": "2",
+    "price": "12000",
+    "imageUrl": "https://shangrilaresorts.com.pk/wp-content/uploads/2018/06/0J3A8346ccccc-1000x667-1.jpg",
+    "description": "Nestled right on the shore of Lower Kachura Lake, this charming stone cottage is ideal for a romantic retreat or peaceful family stay. Surrounded by cherry trees and with direct lake access, guests enjoy serene mornings, boat rides, and awe-inspiring views of Skardu's rugged peaks. It features traditional wooden interiors, large windows, and a private deck. Includes breakfast, parking, and bonfire service on request.\r\n\r\n",
+    "id": "0.6090326558644904"
+  },
+  {
+    "title": "Luxury Hilltop Villa in Islamabad",
+    "location": "Islamabad, E-7",
+    "type": "villa",
+    "rooms": "4",
+    "price": "18000",
+    "imageUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4MTY3NzM3MjEzODYwMjAyOA%3D%3D/original/3372586f-8232-418b-bfb0-5cda8d2f688b.jpeg?im_w=720",
+    "description": "A cozy, well-lit modern living room with a sofa, coffee table, and houseplants — perfect for representing a stylish Airbnb rental.\r\n\r\n",
+    "id": "0.6049102605237469"
+  },
+  {
+    "id": "0.6356993921169076",
+    "title": "Peaceful Garden Retreat in Lahore",
+    "location": "Lahore, DHA Phase 6",
+    "type": "apartment",
+    "rooms": "3",
+    "price": "1000",
+    "imageUrl": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
+    "description": "Escape the city noise at this peaceful 3-bedroom villa located in the heart of DHA Lahore. Enjoy a private garden, fast Wi-Fi, and a fully equipped kitchen. Ideal for families or business travelers. 15 minutes from Allama Iqbal Airport. No loud parties allowed. Smoking not permitted indoors.\r\n\r\n"
+  },
+  {
+    "title": "Spanish‑Influence Cottage in Hunza",
+    "location": "Hunza, Karimabad",
+    "type": "other",
+    "rooms": "2",
+    "price": "9000",
+    "imageUrl": "https://i.pinimg.com/736x/07/3d/5b/073d5b220b009fba4abeb9ff2b58fe82.jpg",
+    "description": "Stone & stucco, terracotta accents, hillside views. Cozy 2-bedroom with outdoor seating; ideal for mountain lovers.\r\n\r\n",
+    "clean_fees": "500",
+    "service_fees": "600",
+    "id": "0.21448937930488987"
+  },
+  {
+    "title": "Budget Apartment in Karachi",
+    "location": "Karachi, Gulshan-e-Iqbal Block 13D",
+    "type": "apartment",
+    "rooms": "1",
+    "price": "15500",
+    "imageUrl": "https://www.ameradnan.com/wp-content/uploads/2023/09/spanish-house-designs-8-1.jpg",
+    "description": "Compact and affordable 1-bedroom apartment with AC and Wi-Fi. Near NIPA Choragi. Walkable to cafes, markets, and public transport. Suitable for solo travelers or students.\r\n\r\n",
+    "clean_fees": "500",
+    "service_fees": "700",
+    "id": "0.7342417689082654"
+  }
+]

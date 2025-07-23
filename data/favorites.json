@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Contemporary Neoclassical Mansion ",
+    "location": "Islamabad, Sector E",
+    "type": "other",
+    "rooms": "5",
+    "price": "20000",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwx1blUk266HLvRv3pg7HttVt-6aonkwKxPDRNKKFe0gqI6iSY-TcmY_cyA1MON7ZDTimUjofmZmuZeQNQfSqSGROvdXWpLeeeCenkc-PQzYOVf8J7wDApzZL5l6_6WsrCPOrZALhFu_U0S9r5Om2H5K_zsWRdGEjkQK2cLkOATJWqJf58M1ZIRXZswsw/w1200-h630-p-k-no-nu/Magnificent-Neoclassical-Residence-s.jpg",
+    "description": "Neoclassical design, stately columns, landscaped gardens. Ideal for executive guests looking for luxury comfort.",
+    "clean_fees": "1300",
+    "service_fees": "1000",
+    "id": "0.17028817558296006"
+  },
+  {
+    "title": "Modern Villa in Lahore",
+    "location": "Lahore, DHA Phase 5",
+    "type": "villa",
+    "rooms": "4",
+    "price": "15000",
+    "imageUrl": "https://media.admiddleeast.com/photos/668abef2904bb92f1fe5c49d/master/w_1600%2Cc_limit/1.%2520230828_HA_Hse82E251V2.jpg",
+    "description": "Spacious 4-bedroom villa with garden and parking. Near Y‑Block Market. Fully equipped, backup generator. No pets.\r\n\r\n",
+    "clean_fees": "1200",
+    "service_fees": "900",
+    "id": "0.09684774337142021"
+  }
+]
