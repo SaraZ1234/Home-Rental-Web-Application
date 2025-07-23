@@ -75,5 +75,5 @@ exports.showFavorites = (req, res, next) => {
 
 // HOME PAGE INTERFACE
 exports.HomeInterface = (req, res, next) => {
-  res.sendFile(path.join(rootDir, 'views', 'user', 'home.html'));
+  res.sendFile(path.join(rootDir, 'views', 'user', 'index.html'));
 };
