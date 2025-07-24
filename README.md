@@ -43,3 +43,7 @@ Fill in your reservation details (dates, guests, etc.) to complete the booking.
 ---
 ### 🔹 Enable delete Reservations  
 ![https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/Enabling%20delete%20reservation.png?raw=true](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/Enabling%20delete%20reservation.png?raw=true)
+
+---
+### 🔹 Deleted Reservation 
+![https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/deleted%20reservation.png?raw=true](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/deleted%20reservation.png?raw=true)
