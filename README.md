@@ -6,7 +6,7 @@ It is a simple web application that allows users to **book homes at various loca
 ---
 
 ## 🖼️ Screenshots
-### 🔹 Explore Houses Page  
+### 🔹 Explore Home Page  
 ![https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/homepage.png?raw=true](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/homepage.png?raw=true)
 ### 🔹 Explore Houses Page  
 ![Explore Page](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/explore.png?raw=true)
