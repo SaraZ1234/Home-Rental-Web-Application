@@ -4,7 +4,5 @@
  ## 🖼️ Screenshots
  ### 🔹 Explore house Page  
  ![https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/explore.png?raw=true](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/explore.png?raw=true)
- ### 🔹 Cards Page  
- ![https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/image.png?raw=true](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/image.png?raw=true)
  ### 🔹 Details Page  
  ![https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/details.png?raw=true](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/details.png?raw=true)
