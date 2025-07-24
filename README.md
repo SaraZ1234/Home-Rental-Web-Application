@@ -47,3 +47,8 @@ Fill in your reservation details (dates, guests, etc.) to complete the booking.
 ---
 ### 🔹 Deleted Reservation 
 ![https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/deleted%20reservation.png?raw=true](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/deleted%20reservation.png?raw=true)
+
+---
+### 🔹 Delete Favorite Home (Click "Yes" to Confirm)  
+To delete a home from your favorites, click the **filled star icon**, then confirm by clicking **"Yes"** in the popup.  
+![Delete from Favorites](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/remove%20from%20favorites.png?raw=true)
