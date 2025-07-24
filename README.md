@@ -23,3 +23,8 @@ It is a simple web application that allows users to **book homes at various loca
 ---
 ### 🔹 Favorites Page  
 ![https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/Add%20to%20favorite%20page.png?raw=true](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/Add%20to%20favorite%20page.png?raw=true)
+---
+### 🔹 Make a Reservation  
+To reserve a home, click the **"Reserve Now"** button on the property details page.  
+![Reserve Now](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/details.png?raw=true)
+
