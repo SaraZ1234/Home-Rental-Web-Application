@@ -36,4 +36,7 @@ To reserve a home, click the **"Reserve Now"** button on the property details pa
 Fill in your reservation details (dates, guests, etc.) to complete the booking.  
 ![https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/reservation%20page.png?raw=true](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/reservation%20page.png?raw=true)
 
+---
+### 🔹 View Reservations  
+![https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/View%20reservation.png?raw=true](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/View%20reservation.png?raw=true)
 
