@@ -21,4 +21,5 @@ It is a simple web application that allows users to **book homes at various loca
 ![Add to Favorites](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/Add%20to%20favortes%20star.png?raw=true)
 
 ---
-
+### 🔹 Favorites Page  
+![https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/Add%20to%20favorite%20page.png?raw=true](https://github.com/SaraZ1234/Home-Rental-Web-Application/blob/master/Add%20to%20favorite%20page.png?raw=true)
